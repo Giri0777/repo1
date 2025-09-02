@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+                git credentialsId: '4321532d-bbed-40ab-83c0-13fd7248d559', url: 'https://github.com/Giri0777/repo1.git'
+            }
+        }
+    }
+}
